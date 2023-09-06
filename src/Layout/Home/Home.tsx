@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Card from '../../components/Card';
-import Cart from '../../components/Carts';
+import Header from '../../Shared/Header';
 
 export interface ProductType {
      _id: string;
@@ -18,8 +18,9 @@ const Home = () => {
      useEffect(() => {
           fetch('./public.json')
                .then(res => res.json())
-               .then(data => {setProducts(data)
-               console.log(data)
+               .then(data => {
+                    setProducts(data)
+                    console.log(data)
                })
      }, []);
 
@@ -30,12 +31,14 @@ const Home = () => {
      }
 
      return (
-          <div  className='grid grid-cols-3'>
-               {
-                    products.map(product => <Card key={product._id} product={product} handleAddToCart={handleAddToCart}></Card>)
-               }
-               <Cart cart={cart}></Cart>
-          </div >
+          <div>
+               <Header cart={cart}></Header>
+               <div className='grid grid-cols-3'>
+                    {
+                         products.map(product => <Card key={product._id} product={product} handleAddToCart={handleAddToCart}></Card>)
+                    }
+               </div >
+          </div>
      );
 };
 
