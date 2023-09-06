@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 import { ProductType } from '../Layout/Home/Home';
 import Cart from './Cart';

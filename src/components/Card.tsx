@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ProductType } from '../Layout/Home/Home';
 
 interface PropType {
@@ -7,7 +7,7 @@ interface PropType {
 }
 const Card = ({ product, handleAddToCart }: PropType) => {
      
-     const { _id, description, img, title, price } = product
+     const {img, title, price } = product
      return (
           <div>
                <div className="card card-compact w-96 h-96 bg-base-100 shadow-xl">
