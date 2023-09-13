@@ -10,7 +10,7 @@ const Card = ({ product, handleAddToCart }: PropType) => {
      const {img, title, price } = product
      return (
           <div>
-               <div className="card card-compact w-96 h-96 bg-base-100 shadow-xl">
+               <div className="card card-compact h-96 bg-base-100 shadow-xl">
                     <figure><img src={img} alt="Shoes" /></figure>
                     <div className="card-body">
                          <h2 className="card-title">{title}</h2>

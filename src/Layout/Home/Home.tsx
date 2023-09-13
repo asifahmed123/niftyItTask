@@ -33,7 +33,7 @@ const Home = () => {
      return (
           <div>
                <Header cart={cart}></Header>
-               <div className='grid grid-cols-3'>
+               <div className='grid grid-cols-3 gap-6'>
                     {
                          products.map(product => <Card key={product._id} product={product} handleAddToCart={handleAddToCart}></Card>)
                     }

@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+
 import { ProductType } from "../Layout/Home/Home";
 import Cart from "../components/Cart";
 interface CartType {
@@ -16,7 +16,7 @@ const Header = ({ cart }: CartType) => {
           <div>
                <div className="navbar bg-base-100">
                     <div className="flex-1">
-                         <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                         <a className="btn btn-ghost normal-case text-xl">Vehicle-rev</a>
                     </div>
                     <div className="flex-none">
                          <div className="dropdown dropdown-end">
